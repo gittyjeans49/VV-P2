@@ -11,6 +11,7 @@
 - Jean Felipe Camaroto Bondan `RA: 2272555`
 
 ### Repositório
+
 [Github](https://github.com/gittyjeans49/VV-P2)
 
 ## Tópicos
@@ -44,7 +45,7 @@ Fluxos escolhidos para serem testados:
 
 #### Cenário 1: Login e Navegação
 
-```javascript
+```js
 ```
 
 - Teste 1: Testando fluxo de login;
@@ -54,17 +55,47 @@ Fluxos escolhidos para serem testados:
 
 #### Cenário 2: Catálogo de Produtos
 
-```javascript
+```js
 ```
 
 - Teste 1: Verificando se todos os produtos exibidos no catálogo estão listados corretamente;
 - Teste 2: Verificando se as informações dos produtos (nome, preço, imagem etc.) estão corretas e correspondem aos produtos exibidos na interface;
 - Teste 3: Testando a funcionalidade de busca de produtos, verificando se os resultados são consistentes e corretos.
 
-
 #### Cenário 3: Adição de Produtos ao Carrinho
 
-```javascript
+```js
+/// <reference types="cypress" />
+
+describe('Cenário 03 - Adição de Produtos ao Carrinho', () => {
+    beforeEach(() => {
+        cy.visit('https://www.saucedemo.com');
+        cy.get('[data-test="username"]').type('standard_user');
+        cy.get('[data-test="password"]').type('secret_sauce');
+        cy.get('[data-test="login-button"]').click();
+    });
+
+    // testes 1 e 2
+    it('Adicionar um produto ao carrinho e verificar se o produto correto foi adicionado', () => {
+        cy.get('.btn_inventory').first().click();
+        cy.get('.inventory_item_name').first().then(($el) => {
+            const name = $el.text();
+            cy.get('.shopping_cart_link').click();
+            cy.get('.inventory_item_name').first().should('have.text', name);
+        });
+    });
+
+    // testes 2 e 3
+    it('Adicionar todos os produtos ao carrinho e verificar se a quantidade correta foi adicionada', () => {
+        cy.get('.btn_inventory').each(($el) => {
+            cy.wrap($el).click();
+        });
+        cy.get('.btn_inventory').its('length').then((length) => {
+            cy.get('.shopping_cart_link').click();
+            cy.get('#cart_contents_container').find('.cart_item').should('have.length', length);
+        });
+    });
+});
 ```
 
 - Teste 1: Testando a funcionalidade de adicionar produtos ao carrinho;
@@ -72,4 +103,3 @@ Fluxos escolhidos para serem testados:
 - Teste 3: Testando o limite máximo de produtos que podem ser adicionados ao carrinho e verificar se o sistema está tratando corretamente essa condição.
 
 ### Resultados
-
