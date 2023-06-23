@@ -87,7 +87,7 @@ describe('Cenário 03 - Adição de Produtos ao Carrinho', () => {
 
     // testes 2 e 3
     it('Adicionar todos os produtos ao carrinho e verificar se a quantidade correta foi adicionada', () => {
-        cy.get('.btn_inventory').each(($el, index, $list) => {
+        cy.get('.btn_inventory').each(($el) => {
             cy.wrap($el).click();
         });
         cy.get('.btn_inventory').its('length').then((length) => {
