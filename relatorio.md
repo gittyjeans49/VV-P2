@@ -10,6 +10,9 @@
 - Davi Gil Brito Vaz Takayama `RA: 2316374`
 - Jean Felipe Camaroto Bondan `RA: 2272555`
 
+### Repositório
+[Github](https://github.com/gittyjeans49/VV-P2)
+
 ## Tópicos
 
 - objetivo
@@ -44,14 +47,29 @@ Fluxos escolhidos para serem testados:
 ```javascript
 ```
 
+- Teste 1: Testando fluxo de login;
+- Teste 2: Verificando se o usuário logado é direcionado para a home;
+- Teste 3: Verificando menu de navegação para diferentes páginas;
+- Teste 4: Verificando se a posição e funcionamento dos elementos estão corretos em todas as páginas.
+
 #### Cenário 2: Catálogo de Produtos
 
 ```javascript
 ```
 
+- Teste 1: Verificando se todos os produtos exibidos no catálogo estão listados corretamente;
+- Teste 2: Verificando se as informações dos produtos (nome, preço, imagem etc.) estão corretas e correspondem aos produtos exibidos na interface;
+- Teste 3: Testando a funcionalidade de busca de produtos, verificando se os resultados são consistentes e corretos.
+
+
 #### Cenário 3: Adição de Produtos ao Carrinho
 
 ```javascript
 ```
+
+- Teste 1: Testando a funcionalidade de adicionar produtos ao carrinho;
+- Teste 2: Verificando se os produtos são corretamente adicionados e refletidos no resumo do carrinho;
+- Teste 3: Testando o limite máximo de produtos que podem ser adicionados ao carrinho e verificar se o sistema está tratando corretamente essa condição.
+
 ### Resultados
 
