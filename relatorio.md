@@ -158,4 +158,42 @@ describe('Cenário 03 - Adição de Produtos ao Carrinho', () => {
 - Teste 2: Verificando se os produtos são corretamente adicionados e refletidos no resumo do carrinho;
 - Teste 3: Testando o limite máximo de produtos que podem ser adicionados ao carrinho e verificar se o sistema está tratando corretamente essa condição.
 
-### Resultados
+### Resultados gerais
+
+<!-- geral -->
+| Spec | Tests | Passing | Failing | Pending | Skipped |
+| ---- | ----- | ------- | ------- | ------- | ------- |
+| √ catalogo.cy.js | 00:08 | 3 | 3 | - | - |
+| √ cenario-3.cy.js | 00:04 | 2 | 2 | - | - |
+| √ login.cy.js | 00:19 | 5 | 5 | - | - |
+| √ All specs passed! | 00:32 | 10 | 10 | - | - |
+
+<!-- cenario 1 -->
+### Cenário 01 - User Login + Navigation
+
+> - √ Navegação para a aba About (10130ms)
+>
+> - √ Navegação para a aba Logout
+>
+> - √ Navegação para a aba Reset App State
+>
+> - √ Navegação para a aba All Items
+>
+> - √ Verificar elementos de navegação
+
+<!-- cenario 2 -->
+### Produtos no catálogo
+
+> - √ Todos os produtos listados corretamente
+>
+> - √ Informações dos produtos
+>
+> - √ Consistência filtro de produtos
+
+<!-- cenario 3 -->
+
+### Cenário 03 - Adição de Produtos ao Carrinho
+
+> - √ Adicionar um produto ao carrinho e verificar se o produto correto foi adicionado
+>
+> - √ Adicionar todos os produtos ao carrinho e verificar se a quantidade correta foi adicionada
