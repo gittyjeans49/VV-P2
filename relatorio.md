@@ -161,12 +161,12 @@ describe('Cenário 03 - Adição de Produtos ao Carrinho', () => {
 ### Resultados gerais
 
 <!-- geral -->
-| Spec | Tests | Passing | Failing | Pending | Skipped |
-| ---- | ----- | ------- | ------- | ------- | ------- |
-| √ catalogo.cy.js | 00:08 | 3 | 3 | - | - |
-| √ cenario-3.cy.js | 00:04 | 2 | 2 | - | - |
-| √ login.cy.js | 00:19 | 5 | 5 | - | - |
-| √ All specs passed! | 00:32 | 10 | 10 | - | - |
+| Spec                | Tests | Passing | Failing | Pending | Skipped |
+| ------------------- | ----- | ------- | ------- | ------- | ------- |
+| √ catalogo.cy.js    | 00:08 | 3       | 3       | -       | -       |
+| √ cenario-3.cy.js   | 00:04 | 2       | 2       | -       | -       |
+| √ login.cy.js       | 00:19 | 5       | 5       | -       | -       |
+| √ All specs passed! | 00:32 | 10      | 10      | -       | -       |
 
 <!-- cenario 1 -->
 ### Cenário 01 - User Login + Navigation
